@@ -1,0 +1,10 @@
+{
+    "eslint.format.enable": true,
+    "eslint.nodePath": "./tools/node_modules/eslint",
+    "eslint.options": {
+        "configFile": "./.eslintrc.js"
+    },
+    "eslint.validate": [
+        "javascript"
+    ]
+}
