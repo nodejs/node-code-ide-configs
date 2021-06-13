@@ -6,6 +6,7 @@
   // VSCode extensions to automatically install within the dev environment
   "extensions": [
     "ms-azuretools.vscode-docker",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.cpptools"
   ]
 }
