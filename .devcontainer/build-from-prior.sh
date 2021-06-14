@@ -10,5 +10,5 @@ shopt -s inherit_errexit
 __dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$__dirname"
 
-docker build -t cspotcode/node-devcontainer:ubuntu-base --file ./.devcontainer/Dockerfile.ubuntu-base .
+docker build -t cspotcode/node-devcontainer:ubuntu-base --file ./Dockerfile.ubuntu-base .
 docker build -t cspotcode/node-devcontainer:prior .
