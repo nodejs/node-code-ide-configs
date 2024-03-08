@@ -1,10 +1,22 @@
 {
-    "eslint.format.enable": true,
-    "eslint.nodePath": "./tools/node_modules/eslint",
-    "eslint.options": {
-        "configFile": "./.eslintrc.js"
-    },
-    "eslint.validate": [
-        "javascript"
-    ]
+  "eslint.format.enable": true,
+  "eslint.nodePath": "./tools/node_modules/eslint",
+  "eslint.options": {
+    "configFile": "./.eslintrc.js"
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  // clangd config
+  "clangd.arguments": [
+    "-header-insertion=never" // More annoying than helpful
+  ],
+  "clangd.onConfigChanged": "restart",
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  // Let clangd take care of these features.
+  "C_Cpp.autocomplete": "disabled",
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp.intelliSenseEngine": "disabled",
 }
