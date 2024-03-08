@@ -1,6 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
+    // Debugging JS files
     {
       "type": "node",
       "request": "launch",
@@ -8,6 +9,38 @@
       "program": "${workspaceFolder}/${relativeFile}",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "${workspaceFolder}/node"
-    }
+    },
+    // Debugging C++ files
+    {
+      "name": "node (debug)",
+      "type": "cppdbg", // "cppdbg" for GDB/LLDB, "cppvsdbg" for Windows Visual Studio debugger
+      "request": "launch",
+      "program": "${workspaceFolder}/out/Debug/node",
+      "args": [], // Optional command line args
+      "preLaunchTask": "make debug",
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      // GDB
+      "setupCommands": [
+        {
+          "description": "Enable pretty printing for gdb",
+          "text": "-enable-pretty-printing"
+        },
+        {
+          "description": "Load v8 gdb configuration",
+          "text": "-interpreter-exec console \"source -v ${workspaceFolder}/deps/v8/tools/gdbinit\""
+        },
+      ],
+      // LLDB
+      "MIMode": "lldb",
+      "setupCommands": [
+        {
+          "description": "Load v8 lldb configuration",
+          "text": "-interpreter-exec mi \"command script import ${workspaceFolder}/deps/v8/tools/lldb_commands.py\""
+        },
+      ],
+    },
   ]
 }
