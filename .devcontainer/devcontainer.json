@@ -1,0 +1,12 @@
+{
+  "name": "node-devcontainer",
+  "image": "cspotcode/node-devcontainer:prior",
+  "workspaceFolder": "/workspaces/node",
+
+  // VSCode extensions to automatically install within the dev environment
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.cpptools"
+  ]
+}
