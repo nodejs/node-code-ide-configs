@@ -2,5 +2,5 @@
 
 Here are some IDE specific configs you can use while developing on [Node.js core](https://github.com/nodejs/node)
 
-- Visual Studio Code, see [.vscode/README.md](.vscode/README.md)
-- IntelliJ IDEs, see [IntelliJ-IDE.md](IntelliJ-IDE.md)
+- Visual Studio Code, see [./vscode.md](./vscode.md)
+- IntelliJ IDEs, see [IntelliJ-IDE.md](./IntelliJ-IDE.md)
