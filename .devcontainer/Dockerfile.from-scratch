@@ -1,0 +1,11 @@
+# Configure an Ubuntu-based dev environment
+FROM cspotcode/node-devcontainer:ubuntu-base
+
+WORKDIR /workspaces/node
+# Rebuild (should be fast since prior build already did this)
+RUN git clone https://github.com/nodejs/node /workspaces/node
+RUN ./configure && make -j4
+
+WORKDIR /workspaces
+RUN mv /workspaces/node /workspaces/node-prior
+WORKDIR /workspaces/node-prior
