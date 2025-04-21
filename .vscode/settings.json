@@ -1,12 +1,13 @@
 {
+  "eslint.nodePath": "./tools/eslint/node_modules",
   "eslint.format.enable": true,
-  "eslint.nodePath": "./tools/node_modules/eslint",
-  "eslint.options": {
-    "configFile": "./.eslintrc.js"
-  },
   "eslint.validate": [
     "javascript"
   ],
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+
   // clangd config
   "clangd.arguments": [
     "-header-insertion=never" // More annoying than helpful
