@@ -1,9 +1,5 @@
 {
-  "eslint.useFlatConfig": true,
   "eslint.nodePath": "./tools/eslint/node_modules",
-  "eslint.options": {
-    "overrideConfigFile": "./eslint.config.mjs"
-  },
   "eslint.format.enable": true,
   "eslint.validate": [
     "javascript"
