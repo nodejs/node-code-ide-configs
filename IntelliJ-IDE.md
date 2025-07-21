@@ -18,7 +18,7 @@
 2. Open CLion.
 3. In popup, click 'OK'
 4. Open 'Settings/Build, Execution, Development/Makefile'
-   1. Change 'Commands' in 'Pre-configuration...' to './configure --debug'
+   1. Change 'Commands' in 'Pre-configuration...' to './configure --debug -C'
    2. Use your own build options, like '-j32' or '-j4' depends your device.
 5. Waiting for 'Updating indexes' done
 
