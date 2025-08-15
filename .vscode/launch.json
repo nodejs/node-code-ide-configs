@@ -8,7 +8,11 @@
       "name": "Run single test",
       "program": "${workspaceFolder}/${relativeFile}",
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "${workspaceFolder}/node"
+      "runtimeExecutable": "${workspaceFolder}/node",
+      "skipFiles": [
+        // VSCode excludes node internals by default. Uncomment this to include them.
+        // "<node_internals>/**"
+      ]
     },
     // Debugging C++ files
     {
